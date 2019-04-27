@@ -2,8 +2,10 @@ package com.rswaffle.chronicsmoker;
 
 import com.rswaffle.chronicsmoker.proxy.CommonProxy;
 import com.rswaffle.chronicsmoker.util.Reference;
+import com.rswaffle.chronicsmoker.util.SmokerTab;
 import com.rswaffle.chronicsmoker.util.handlers.RegistryHandler;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -21,6 +23,8 @@ public class Main
 {
 	@Instance 
 	public static Main instance;
+	
+	public static final CreativeTabs smokertab = new SmokerTab("smokertab");
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS,
 				serverSide = Reference.COMMON_PROXY_CLASS)

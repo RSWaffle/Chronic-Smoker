@@ -1,6 +1,13 @@
+//CreativeTab
+itemGroup.smokertab=Chronic Smoker
 
 //Items
 item.item_cigarette.name=Basic Cigarette
+item.item_tobacco.name=Tobacco
+item.item_seed_tobacco.name=Tobacco Seeds
 
 //Blocks
 tile.block_packedsmoke.name=Packed Smoke
+
+//Plants
+tile.plant_tobacco.name=Tobacco Plant

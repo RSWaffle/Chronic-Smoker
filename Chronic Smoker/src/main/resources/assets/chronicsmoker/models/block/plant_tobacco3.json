@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": 
+    {
+        "crop": "chronicsmoker:blocks/plant_tobacco3"
+    }
+}
