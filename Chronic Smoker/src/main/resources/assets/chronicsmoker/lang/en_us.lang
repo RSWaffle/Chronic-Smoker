@@ -1,6 +1,6 @@
 
 //Items
-item.item_cigarette.name=Cigarette
+item.item_cigarette.name=Basic Cigarette
 
 //Blocks
 tile.block_packedsmoke.name=Packed Smoke
