@@ -16,6 +16,7 @@ public class ItemInit
 	
 	//Items
 	public static final Item ITEM_TOBACCO = new ItemCustomFood("item_tobacco", 1, false);
+	public static final Item ITEM_PACK_OF_CIGARETTES = new ItemBase("item_pack_of_cigarettes");
 	
 	//Cigarettes
 	public static final Item ITEM_CIGARETTE = new ItemCigarette("item_cigarette");
