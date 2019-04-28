@@ -2,6 +2,6 @@
     "parent": "block/crop",
     "textures": 
     {
-        "crop": "chronicsmoker:blocks/plant_tobacco4"
+        "crop": "chronicsmoker:blocks/plant_t"
     }
 }

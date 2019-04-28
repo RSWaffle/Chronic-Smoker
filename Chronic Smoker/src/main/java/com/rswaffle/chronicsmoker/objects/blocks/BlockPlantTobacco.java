@@ -45,6 +45,14 @@ public class BlockPlantTobacco extends BlockCrops
 	}
 	
 	@Override
+	protected boolean canSustainBush(IBlockState state)
+	{
+		return state.getBlock() == BlockInit.PLANT_TOBACCO;
+	}
+	
+
+	
+	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos,
 								    IBlockState state, EntityPlayer playerIn,
 								    EnumHand hand, EnumFacing facing,
@@ -54,7 +62,8 @@ public class BlockPlantTobacco extends BlockCrops
 		{
 			if(this.isMaxAge(state))
 			{
-				worldIn.spawnEntity(new EntityItem(worldIn,pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.ITEM_TOBACCO, 2)));
+				worldIn.spawnEntity(new EntityItem(worldIn,pos.getX(), pos.getY(), pos.getZ(), 
+						new ItemStack(ItemInit.ITEM_TOBACCO, 2)));
 				worldIn.setBlockState(pos, this.withAge(0));
 				return true;
 			}

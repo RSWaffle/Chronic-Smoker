@@ -1,14 +1,50 @@
-{ 
-    "varients":
-    {
-        "age=0": { "model": "chronicsmoker:plant_tobacco0"},
-        "age=1": { "model": "chronicsmoker:plant_tobacco1"},
-        "age=2": { "model": "chronicsmoker:plant_tobacco2"},
-        "age=3": { "model": "chronicsmoker:plant_tobacco3"},
-        "age=4": { "model": "chronicsmoker:plant_tobacco4"},
-        "age=5": { "model": "chronicsmoker:plant_tobacco5"},
-        "age=6": { "model": "chronicsmoker:plant_tobacco6"},
-        "age=7": { "model": "chronicsmoker:plant_tobacco7"}
-        
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cross"
+    },
+    "variants": {
+        "age": {
+            "0": {
+                "textures": {
+                    "cross": "chronicsmoker:blocks/plant_tobacco0"
+                }
+            },
+            "1": {
+                "textures": {
+                    "cross": "chronicsmoker:blocks/plant_tobacco1"
+                }
+            },
+            "2": {
+                "textures": {
+                    "cross": "chronicsmoker:blocks/plant_tobacco2"
+                }
+            },
+            "3": {
+                "textures": {
+                    "cross": "chronicsmoker:blocks/plant_tobacco3"
+                }
+            },
+            "4": {
+                "textures": {
+                    "cross": "chronicsmoker:blocks/plant_tobacco4"
+                }
+            },
+            "5": {
+                "textures": {
+                    "cross":"chronicsmoker:blocks/plant_tobacco5"
+                }
+            },
+            "6": {
+                "textures": {
+                    "cross": "chronicsmoker:blocks/plant_tobacco6"
+                }
+            },
+            "7": {
+                "textures": {
+                    "cross": "chronicsmoker:blocks/plant_tobacco7"
+                }
+            }
+        }
     }
 }
