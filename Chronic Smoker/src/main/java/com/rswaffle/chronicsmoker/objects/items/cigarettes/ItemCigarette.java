@@ -27,11 +27,12 @@ public class ItemCigarette extends ItemBase
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
 	{
 		ItemStack item = playerIn.getHeldItem(handIn);
+		Vec3d aim = playerIn.getLookVec();
 		
 		
-		worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, playerIn.posX + 0.5D,
-							  playerIn.posY + 1.0D, playerIn.posZ + 0.5D,
-							  0.0D, 0.0D, 0.0D);
+		worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, playerIn.posX + 0 + aim.x,
+							  playerIn.posY + 1.5 + aim.y, playerIn.posZ + 0 + aim.z,
+							  0, 0, 0);
 		
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, item);
 	}
