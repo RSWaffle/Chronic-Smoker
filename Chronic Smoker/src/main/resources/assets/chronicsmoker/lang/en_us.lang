@@ -1,8 +1,10 @@
 //CreativeTab
 itemGroup.smokertab=Chronic Smoker
 
-//Items
+//Cigs
 item.item_cigarette.name=Basic Cigarette
+item.item_cigarette2.name=Tier 2 Cigarette
+//Items
 item.item_tobacco.name=Tobacco
 item.item_seed_tobacco.name=Tobacco Seeds
 item.item_pack_of_cigarettes.name=Pack of Cigarettes

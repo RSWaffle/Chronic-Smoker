@@ -1,9 +1,13 @@
 package com.rswaffle.chronicsmoker.objects.items.cigarettes;
 
+import com.rswaffle.chronicsmoker.Main;
+import com.rswaffle.chronicsmoker.init.ItemInit;
 import com.rswaffle.chronicsmoker.objects.items.ItemBase;
 
 
+import com.rswaffle.chronicsmoker.util.IHasModel;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -11,7 +15,7 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class ItemCigarette extends ItemBase 
+public class ItemCigarette extends Item implements IHasModel
 {
 	EnumParticleTypes type;
 
@@ -22,7 +26,24 @@ public class ItemCigarette extends ItemBase
 
 	public ItemCigarette(String name)
 	{
-		super(name);
+		init(name);
+	}
+
+	public ItemCigarette(String name, int damage, int potionID, int duration, int amplifier, EnumParticleTypes type)
+	{
+		init(name);
+		setDamage(damage);
+		setPotion(potionID, duration, amplifier);
+		setParticle(type);
+	}
+
+	public void init(String name)
+	{
+		setUnlocalizedName(name);
+		setRegistryName(name);
+		setCreativeTab(Main.smokertab);
+
+		ItemInit.ITEMS.add(this);
 
 		potionID = 1;
 		duration = 100;
@@ -30,6 +51,13 @@ public class ItemCigarette extends ItemBase
 		damage = 1;
 
 		type = EnumParticleTypes.SMOKE_NORMAL;
+	}
+
+	@Override
+	public void registerModels()
+	{
+		Main.proxy.registerItemRenderer(this, 0, "inventory");
+
 	}
 
 	public void setPotion(int potionID, int duration, int amplifier)

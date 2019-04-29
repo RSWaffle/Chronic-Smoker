@@ -9,6 +9,7 @@ import com.rswaffle.chronicsmoker.objects.items.cigarettes.ItemCigarette;
 import com.rswaffle.chronicsmoker.objects.items.food.ItemCustomFood;
 
 import net.minecraft.item.Item;
+import net.minecraft.util.EnumParticleTypes;
 
 public class ItemInit
 {
@@ -20,6 +21,10 @@ public class ItemInit
 	
 	//Cigarettes
 	public static final Item ITEM_CIGARETTE = new ItemCigarette("item_cigarette");
+
+	public static final Item ITEM_CIGARETTE2 = new ItemCigarette("item_cigarette2", 1, 3, 100, 0, EnumParticleTypes.VILLAGER_ANGRY);
+
+
 	
 	//Crops
 	public static final Item ITEM_SEED_TOBACCO = new ItemTobaccoSeed("item_seed_tobacco");

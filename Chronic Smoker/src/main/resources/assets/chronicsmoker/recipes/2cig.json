@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+
+    {
+      "item": "chronicsmoker:item_cigarette"
+    },
+
+    {
+      "item": "chronicsmoker:item_cigarette"
+    }
+
+  ],
+
+  "result":
+  {
+    "item": "chronicsmoker:item_cigarette2",
+    "count": 1
+  }
+}

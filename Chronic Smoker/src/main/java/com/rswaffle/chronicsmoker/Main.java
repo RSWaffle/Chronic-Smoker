@@ -3,7 +3,6 @@ package com.rswaffle.chronicsmoker;
 import com.rswaffle.chronicsmoker.proxy.CommonProxy;
 import com.rswaffle.chronicsmoker.util.Reference;
 import com.rswaffle.chronicsmoker.util.SmokerTab;
-import com.rswaffle.chronicsmoker.util.handlers.RegistryHandler;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
