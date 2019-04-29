@@ -2,25 +2,53 @@ package com.rswaffle.chronicsmoker.objects.items.cigarettes;
 
 import com.rswaffle.chronicsmoker.objects.items.ItemBase;
 
-import net.minecraft.client.particle.Particle;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.effect.EntityLightningBolt;
+
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.*;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class ItemCigarette extends ItemBase 
 {
+	EnumParticleTypes type;
 
-	public ItemCigarette(String name) 
+	int potionID;
+	int duration;
+	int amplifier;
+	int damage;
+
+	public ItemCigarette(String name)
 	{
 		super(name);
+
+		potionID = 1;
+		duration = 100;
+		amplifier = 0;
+		damage = 1;
+
+		type = EnumParticleTypes.SMOKE_NORMAL;
+	}
+
+	public void setPotion(int potionID, int duration, int amplifier)
+	{
+		this.potionID = potionID;
+		this.duration = duration;
+		this.amplifier = amplifier;
+
+		type = EnumParticleTypes.SMOKE_NORMAL;
+	}
+
+	public void setParticle(EnumParticleTypes type)
+	{
+		this.type = type;
+	}
+
+	public void setDamage(int damage)
+	{
+		this.damage = damage;
 	}
 	
 	@Override
@@ -28,12 +56,16 @@ public class ItemCigarette extends ItemBase
 	{
 		ItemStack item = playerIn.getHeldItem(handIn);
 		Vec3d aim = playerIn.getLookVec();
+
 		
-		
-		worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, playerIn.posX + 0 + aim.x,
+		worldIn.spawnParticle(type, playerIn.posX + 0 + aim.x,
 							  playerIn.posY + 1.5 + aim.y, playerIn.posZ + 0 + aim.z,
 							  0, 0, 0);
-		
+
+		playerIn.attackEntityFrom(DamageSource.GENERIC, damage);
+		playerIn.addPotionEffect((new PotionEffect(Potion.getPotionById(potionID),  duration , amplifier)));
+
+		item.shrink(1);
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, item);
 	}
 	
