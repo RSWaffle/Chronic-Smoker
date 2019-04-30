@@ -15,7 +15,7 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class ItemCigarette extends Item implements IHasModel
+public class ItemBaseCigarette extends Item implements IHasModel
 {
 	EnumParticleTypes type;
 
@@ -24,12 +24,12 @@ public class ItemCigarette extends Item implements IHasModel
 	int amplifier;
 	int damage;
 
-	public ItemCigarette(String name)
+	public ItemBaseCigarette(String name)
 	{
 		init(name);
 	}
 
-	public ItemCigarette(String name, int damage, int potionID, int duration, int amplifier, EnumParticleTypes type)
+	public ItemBaseCigarette(String name, int damage, int potionID, int duration, int amplifier, EnumParticleTypes type)
 	{
 		init(name);
 		setDamage(damage);

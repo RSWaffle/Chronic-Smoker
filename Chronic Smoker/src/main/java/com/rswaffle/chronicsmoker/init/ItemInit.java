@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.rswaffle.chronicsmoker.objects.items.ItemBase;
 import com.rswaffle.chronicsmoker.objects.items.ItemTobaccoSeed;
-import com.rswaffle.chronicsmoker.objects.items.cigarettes.ItemCigarette;
+import com.rswaffle.chronicsmoker.objects.items.cigarettes.ItemBaseCigarette;
 import com.rswaffle.chronicsmoker.objects.items.food.ItemCustomFood;
 
 import net.minecraft.item.Item;
@@ -20,9 +20,9 @@ public class ItemInit
 	public static final Item ITEM_PACK_OF_CIGARETTES = new ItemBase("item_pack_of_cigarettes");
 	
 	//Cigarettes
-	public static final Item ITEM_CIGARETTE = new ItemCigarette("item_cigarette");
+	public static final Item ITEM_CIGARETTE = new ItemBaseCigarette("item_cigarette");
 
-	public static final Item ITEM_CIGARETTE2 = new ItemCigarette("item_cigarette2", 1, 3, 100, 0, EnumParticleTypes.VILLAGER_ANGRY);
+	public static final Item ITEM_CIGARETTE2 = new ItemBaseCigarette("item_cigarette2", 1, 3, 100, 0, EnumParticleTypes.FLAME);
 
 
 	
