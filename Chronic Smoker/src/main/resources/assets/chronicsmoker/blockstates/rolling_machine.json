@@ -1,0 +1,13 @@
+{
+    "variants":
+    {
+        "burning=false,facing=north": {"model": "chronicsmoker:rolling_machine"},
+        "burning=false,facing=east": {"model": "chronicsmoker:rolling_machine", "y": 90},
+        "burning=false,facing=west": {"model": "chronicsmoker:rolling_machine", "y": 270},
+        "burning=false,facing=south": {"model": "chronicsmoker:rolling_machine", "y": 180},
+        "burning=true,facing=north": {"model": "chronicsmoker:lit_rolling_machine"},
+        "burning=true,facing=east": {"model": "chronicsmoker:lit_rolling_machine", "y": 90},
+        "burning=true,facing=west": {"model": "chronicsmoker:lit_rolling_machine", "y": 270},
+        "burning=true,facing=south": {"model": "chronicsmoker:lit_rolling_machine", "y": 180}
+    }
+}

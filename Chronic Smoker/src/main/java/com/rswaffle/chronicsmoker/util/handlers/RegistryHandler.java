@@ -1,5 +1,6 @@
 package com.rswaffle.chronicsmoker.util.handlers;
 
+import com.rswaffle.chronicsmoker.Main;
 import com.rswaffle.chronicsmoker.init.BlockInit;
 import com.rswaffle.chronicsmoker.init.ItemInit;
 import com.rswaffle.chronicsmoker.util.IHasModel;
@@ -9,7 +10,9 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler
@@ -24,6 +27,7 @@ public class RegistryHandler
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) 
 	{
 		event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+		TileEntityHandler.registerTileEntities();
 	}
 	
 	@SubscribeEvent
@@ -44,5 +48,10 @@ public class RegistryHandler
 				((IHasModel)block).registerModels();
 			}
 		}
+	}
+	
+	public static void initRegistries(FMLInitializationEvent event)
+	{
+		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GUIHandler());
 	}
 }

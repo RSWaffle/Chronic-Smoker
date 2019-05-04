@@ -12,5 +12,8 @@ item.item_pack_of_cigarettes.name=Pack of Cigarettes
 //Blocks
 tile.block_packedsmoke.name=Packed Smoke
 
+//Machines
+tile.rolling_machine.name=Rolling Machine
+
 //Plants
 tile.plant_tobacco.name=Tobacco Plant
