@@ -1,0 +1,34 @@
+modLoader="javafml" #mandatory
+loaderVersion="[35,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+issueTrackerURL="http://my.issue.tracker/" #optional
+
+[[mods]] #mandatory
+modId="chronicsmoker" #mandatory
+version="1.16.4-1.0.0" #mandatory
+displayName="Chronic Smoker" #mandatory
+updateJSONURL="http://rswaffle.com/" #optional
+displayURL="http://rswaffle.com/" #optional
+logoFile="logo.png" #optional
+credits="" #optional
+authors="RSWaffle" #optional
+description='''
+If you smoke a cigarette once, you've simply made a bad choice.
+But if you're a chronic smoker, you've been smoking for a long time and will have a hard time stopping.
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.examplemod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[35,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+# Here's another dependency
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.16.4,1.17)"
+    ordering="NONE"
+    side="BOTH"
